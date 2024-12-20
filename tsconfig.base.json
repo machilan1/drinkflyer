@@ -17,7 +17,10 @@
     "paths": {
       "@drinkflyer/home": ["src/libs/home/feat/home/src/index.ts"],
       "@drinkflyer/marquee": ["src/libs/home/ui/marquee/src/index.ts"],
-      "@drinkflyer/product-card": ["src/libs/home/ui/product-card/src/index.ts"]
+      "@drinkflyer/product-card": [
+        "src/libs/home/ui/product-card/src/index.ts"
+      ],
+      "@drinkflyer/story-card": ["src/libs/home/ui/story-card/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MarqueeComponent } from '@drinkflyer/marquee';
 import { MatIconModule } from '@angular/material/icon';
 import { ProductCardComponent } from '@drinkflyer/product-card';
+import { StoryCardComponent } from '@drinkflyer/story-card';
 
 @Component({
   selector: 'lib-home',
@@ -10,10 +11,11 @@ import { ProductCardComponent } from '@drinkflyer/product-card';
     CommonModule,
     MarqueeComponent,
     ProductCardComponent,
+    StoryCardComponent,
     MatIconModule,
   ],
   template: `
-    <div class="bg-black text-white overflow-hidden">
+    <div class="bg-black text-white overflow-hidden px-10">
       <lib-marquee discountInfo="FREE SHIPPING ON ORDERS $35+"></lib-marquee>
       <header class=" px-8 flex justify-between items-center">
         <button><mat-icon>density_medium</mat-icon></button>
@@ -35,23 +37,26 @@ import { ProductCardComponent } from '@drinkflyer/product-card';
           >Shop now</a
         >
       </section>
-      <section class="py-9 px-8">
+      <section class="py-9">
         <h2 class="text-center text-h2">UPLIFT YOUR DRINKING RITUAL</h2>
         <p class="text-center text-xl">
           Relax with alcohol-free cocktails enhanced with 5MG of Hemp THC.
         </p>
         <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
           @for (product of products; track $index) {
-
           <li>
             <lib-product-card [product]="product"></lib-product-card>
           </li>
           }
         </ul>
       </section>
-      <section>
-        <ul>
-          <li>a story</li>
+      <section class="py-9">
+        <ul class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          @for (story of stories; track $index) {
+          <li>
+            <lib-story-card [story]="story"></lib-story-card>
+          </li>
+          }
         </ul>
       </section>
       <section>
@@ -139,7 +144,14 @@ import { ProductCardComponent } from '@drinkflyer/product-card';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  products = [
+  products: {
+    img: string;
+    imgHover: string;
+    name: string;
+    stars: number;
+    reviews: number;
+    price: number;
+  }[] = [
     {
       img: 'assets/product1-1.webp',
       imgHover: 'assets/product1-2.webp',
@@ -203,6 +215,30 @@ export class HomeComponent {
       stars: 5,
       reviews: 100,
       price: 95,
+    },
+  ];
+  stories: {
+    img: string;
+    description: string;
+    button: string;
+  }[] = [
+    {
+      img: 'assets/story1.webp',
+      description:
+        'Wind down with a high-end cocktail crafted to lift your mood without overstaying its welcome.',
+      button: 'Take the edge off',
+    },
+    {
+      img: 'assets/story2.webp',
+      description:
+        'Enjoy anxiety-free moments with a sense of ease infused into each sip of a THC Flyers cocktail.',
+      button: 'Embrace the moment',
+    },
+    {
+      img: 'assets/story3.webp',
+      description:
+        'Elevate your drinking ritual with bartender flavors expertly crafted with 5MG of Hemp-Derived THC.',
+      button: 'Savor Sophistication',
     },
   ];
 }

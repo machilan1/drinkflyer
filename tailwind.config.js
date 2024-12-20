@@ -20,6 +20,7 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'black': '#000000',
+      'orange': '#c99d4d',
     },
     fontSize: {
       sm: '0.8rem',
@@ -30,6 +31,7 @@ module.exports = {
       '4xl': '2.441rem',
       '5xl': '3.052rem',
       'h2':'3.375rem',
+      'h3':'1.68rem',
     },
     extend: {},
   },
