@@ -4,6 +4,8 @@ import { MarqueeComponent } from '@drinkflyer/marquee';
 import { MatIconModule } from '@angular/material/icon';
 import { ProductCardComponent } from '@drinkflyer/product-card';
 import { StoryCardComponent } from '@drinkflyer/story-card';
+import { FeatureSectionComponent } from '@drinkflyer/feature-section';
+import { ContentTemplate1Component } from '@drinkflyer/content-template-1';
 
 @Component({
   selector: 'lib-home',
@@ -12,6 +14,8 @@ import { StoryCardComponent } from '@drinkflyer/story-card';
     MarqueeComponent,
     ProductCardComponent,
     StoryCardComponent,
+    FeatureSectionComponent,
+    ContentTemplate1Component,
     MatIconModule,
   ],
   template: `
@@ -33,8 +37,8 @@ import { StoryCardComponent } from '@drinkflyer/story-card';
           <img class="w-full" src="assets/hero1.webp" alt="hero image" />
         </div>
         <a
-          class="px-4 py-3 bg-white rounded-md text-black bg-opacity-30 backdrop-blur-md absolute left-1/2 transform -translate-x-1/2  bottom-6 "
-          >Shop now</a
+          class="p-4 bg-white rounded-md text-black bg-opacity-30 backdrop-blur-md absolute left-1/2 transform -translate-x-1/2  bottom-6 hover:-translate-y-2 duration-100 text-xl"
+          >SHOP NOW</a
         >
       </section>
       <section class="py-9">
@@ -60,21 +64,35 @@ import { StoryCardComponent } from '@drinkflyer/story-card';
         </ul>
       </section>
       <section>
-        <img src="" alt="comparison image" />
-        <a>Shop now</a>
+        <lib-feature-section [features]="features"></lib-feature-section>
       </section>
+      <!--  -->
       <section>
-        <h2>Feature In</h2>
-        <ul>
-          <li>a publication</li>
+        <h2 class="text-center text-[3.75rem]">FEATURED IN</h2>
+        <ul class="flex flex-wrap justify-center gap-4 mt-8 items-center">
+          <li class="w-[10rem]">
+            <img src="assets/pub1.avif" alt="a image" />
+          </li>
+          <li class="w-[10rem]">
+            <img src="assets/pub2.avif" alt="a image" />
+          </li>
+          <li class="w-[10rem]">
+            <img src="assets/pub3.avif" alt="a image" />
+          </li>
+          <li class="w-[10rem]">
+            <img src="assets/pub4.avif" alt="a image" />
+          </li>
+          <li class="w-[10rem]">
+            <img src="assets/pub5.avif" alt="a image" />
+          </li>
         </ul>
         <ul>
           <li>a testament</li>
         </ul>
       </section>
+      <!--  -->
       <section>
-        <img src="" alt="a image with bottles" />
-        <div>PREMIUM COCKTAILS CRAFTED FOR RELAXATION</div>
+        <lib-content-template-1 [content]="content"></lib-content-template-1>
       </section>
       <section>
         <ul>
@@ -241,4 +259,25 @@ export class HomeComponent {
       button: 'Savor Sophistication',
     },
   ];
+
+  features: {
+    img: string;
+  }[] = [
+    {
+      img: 'assets/feature1.webp',
+    },
+    {
+      img: 'assets/feature2.webp',
+    },
+  ];
+
+  content: {
+    img: string;
+    description: string;
+    button: string;
+  } = {
+    img: 'assets/content1.webp',
+    description: 'PREMIUM THC COCKTAILS CRAFTED FOR RELAXATION',
+    button: 'UNWIND WITH EVERY SIP',
+  };
 }

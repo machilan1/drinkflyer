@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@drinkflyer/content-template-1": [
+        "src/libs/home/ui/content-template-1/src/index.ts"
+      ],
+      "@drinkflyer/feature-section": [
+        "src/libs/home/ui/feature-section/src/index.ts"
+      ],
       "@drinkflyer/home": ["src/libs/home/feat/home/src/index.ts"],
       "@drinkflyer/marquee": ["src/libs/home/ui/marquee/src/index.ts"],
       "@drinkflyer/product-card": [
