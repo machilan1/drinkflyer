@@ -117,7 +117,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
         </button>
         <div class="max-w-[15rem]">
           <a href="#">
-            <img class="w-full" src="assets/logo.avif" alt="hero image" />
+            <img class="w-full" src="assets/logo.avif" alt="logo" />
           </a>
         </div>
         <div class="flex gap-2 items-center">
@@ -157,6 +157,17 @@ import { trigger, transition, animate, style } from '@angular/animations';
             class="p-4 bg-white rounded-md text-black bg-opacity-30 backdrop-blur-md absolute left-1/2 transform -translate-x-1/2  bottom-6 hover:-translate-y-2 duration-100 text-xl"
             >SHOP NOW</a
           >
+          <div>
+            <div
+              class="rotate-6 w-[14.375rem] hidden lg:block absolute top-45px right-4"
+            >
+              <img
+                class="w-full h-full"
+                src="assets/sticker.webp"
+                alt="sticker"
+              />
+            </div>
+          </div>
         </section>
         <section class="px-22.5px py-18px lg:px-45px lg:py-36px">
           <h2 class="text-center text-36px lg:text-h2">
