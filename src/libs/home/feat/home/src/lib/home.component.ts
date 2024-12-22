@@ -1,8 +1,11 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
+  ElementRef,
   signal,
+  ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MarqueeComponent } from '@drinkflyer/marquee';
@@ -159,13 +162,16 @@ import { trigger, transition, animate, style } from '@angular/animations';
           >
           <div>
             <div
-              class="rotate-6 w-[14.375rem] hidden lg:block absolute top-45px right-4"
+              class="duration-100 absolute top-[8%] right-[2%] w-[14.375rem] hidden lg:block "
+              #sticker
             >
-              <img
-                class="w-full h-full"
-                src="assets/sticker.webp"
-                alt="sticker"
-              />
+              <div class="rotate-6 ">
+                <img
+                  class="w-full h-full"
+                  src="assets/sticker.webp"
+                  alt="sticker"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -398,11 +404,13 @@ import { trigger, transition, animate, style } from '@angular/animations';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   backdropOpening = signal<boolean>(false);
   leftMenuOpening = signal<boolean>(false);
   rightMenuOpening = signal<boolean>(false);
   searchOpening = signal<boolean>(false);
+
+  @ViewChild('sticker') sticker!: ElementRef<HTMLDivElement>;
 
   products: {
     img: string;
@@ -615,19 +623,46 @@ export class HomeComponent {
   }
 
   closeAll() {
-    this._closeBackdrop();
-    this._closeLeftMenu();
-    this._closeRightMenu();
+    this.closeBackdrop();
+    this.closeLeftMenu();
+    this.closeRightMenu();
     this.closeSearch();
   }
 
-  _closeLeftMenu() {
+  private closeLeftMenu() {
     this.leftMenuOpening.set(false);
   }
-  _closeRightMenu() {
+  private closeRightMenu() {
     this.rightMenuOpening.set(false);
   }
-  _closeBackdrop() {
+  private closeBackdrop() {
     this.backdropOpening.set(false);
+  }
+
+  ngAfterViewInit(): void {
+    window.addEventListener('scroll', () => {
+      const sticker = this.sticker.nativeElement;
+      const scrollY = window.scrollY;
+      if (400 >= scrollY) {
+        sticker.style.transform = `translateY(-${(scrollY / 400) * 50}px)`;
+      }
+    });
+    // const sticker = this.sticker.nativeElement;
+
+    // const observer = new IntersectionObserver(
+    //   function (entries) {
+    //     // entries: Array of observed elements
+    //     entries.forEach((entry) => {
+    //       console.log(entry);
+    //     });
+    //   },
+    //   {
+    //     root: null,
+    //     rootMargin: '0px',
+    //     threshold: 0,
+    //   }
+    // );
+
+    // observer.observe(sticker);
   }
 }
