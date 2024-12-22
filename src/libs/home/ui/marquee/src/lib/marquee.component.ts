@@ -26,7 +26,7 @@ import { CommonModule } from '@angular/common';
     animation: marquee 30s linear infinite;
   }
 
-  .marquee:hover {
+  .marquee-container:hover {
     animation-play-state: paused;
     color: black;
     background-color: #c99d4d

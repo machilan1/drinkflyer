@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'lib-content-template-1',
   imports: [CommonModule],
-  template: ` <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-8">
+  template: ` <div class="grid grid-cols-1 lg:grid-cols-2 gap-[2.8rem] mt-8">
     <div class="w-full aspect-square rounded-lg overflow-hidden">
       <img class="w-full h-full object-cover" [src]="content().img" alt="" />
     </div>
-    <div class="w-full flex flex-col items-center py-6 ">
+    <div class="w-full flex flex-col items-center justify-center py-6 ">
       <h2 class="text-[2.25rem] lg:text-h2 text-center ">
         {{ content().description }}
       </h2>

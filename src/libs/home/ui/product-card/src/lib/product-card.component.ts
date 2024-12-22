@@ -13,19 +13,19 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
   imports: [CommonModule, CurrencyPipe],
   template: `
     <div
-      class="border-2 border-[#cd9e53] rounded-lg overflow-hidden p-6"
+      class="border-2 border-[#cd9e53] rounded-lg overflow-hidden p-6 cursor-pointer"
       (mouseenter)="showHoverImg()"
       (mouseleave)="showNormalImg()"
     >
       <div class="aspect-[3/4] relative rounded-lg overflow-hidden">
         <img
           #front
-          class="w-full h-full object-cover absolute z-20 duration-100"
+          class="w-full h-full object-cover absolute z-10 duration-100"
           [src]="product().img"
           alt="a image"
         />
         <img
-          class="w-full h-full object-cover absolute z-10"
+          class="w-full h-full object-cover absolute z-0"
           [src]="product().imgHover"
           alt="a image"
         />
@@ -35,7 +35,7 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
         <div class="flex gap-2">
           <div class="flex items-center gap-1">
             @for (item of stars(); track $index) {
-            <img src="assets/star.svg" alt="star" />
+            <img src="assets/svg/star.svg" alt="star" />
             }
             <p>{{ product().reviews }} reviews</p>
           </div>

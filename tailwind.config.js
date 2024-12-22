@@ -14,7 +14,7 @@ module.exports = {
       'white': '#f5eee2',
       'purple': '#3f3cbb',
       'midnight': '#121063',
-      'metal': '#565584',
+      'metal': '#99948c',
       'tahiti': '#3ab7bf',
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
@@ -24,7 +24,7 @@ module.exports = {
     },
     fontSize: {
       sm: '0.8rem',
-      base: '1rem',
+      base: '1.125rem',
       xl: '1.125rem',
       '2xl': '1.563rem',
       '3xl': '1.953rem',
@@ -33,7 +33,12 @@ module.exports = {
       'h2':'3.375rem',
       'h3':'1.68rem',
     },
-    extend: {},
+    extend: {
+      spacing:{
+        '36px':'2.25rem',
+        '45px':'2.813rem',
+      }
+    },
   },
   plugins: [],
 };

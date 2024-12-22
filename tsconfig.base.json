@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@drinkflyer/accordion": ["src/libs/home/ui/accordion/src/index.ts"],
+      "@drinkflyer/backdrop": ["src/libs/home/ui/backdrop/src/index.ts"],
       "@drinkflyer/content-template-1": [
         "src/libs/home/ui/content-template-1/src/index.ts"
       ],
@@ -22,11 +24,16 @@
         "src/libs/home/ui/feature-section/src/index.ts"
       ],
       "@drinkflyer/home": ["src/libs/home/feat/home/src/index.ts"],
+      "@drinkflyer/left-menu": ["src/libs/home/ui/left-menu/src/index.ts"],
       "@drinkflyer/marquee": ["src/libs/home/ui/marquee/src/index.ts"],
       "@drinkflyer/product-card": [
         "src/libs/home/ui/product-card/src/index.ts"
       ],
-      "@drinkflyer/story-card": ["src/libs/home/ui/story-card/src/index.ts"]
+      "@drinkflyer/right-menu": ["src/libs/home/ui/right-menu/src/index.ts"],
+      "@drinkflyer/story-card": ["src/libs/home/ui/story-card/src/index.ts"],
+      "@drinkflyer/testament-card": [
+        "src/libs/home/ui/testament-card/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
