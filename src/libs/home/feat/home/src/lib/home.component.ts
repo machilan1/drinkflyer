@@ -154,7 +154,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
             />
           </div>
           <a
-            class="p-4 bg-white rounded-md text-black bg-opacity-30 backdrop-blur-md absolute left-1/2 transform -translate-x-1/2  bottom-6 hover:-translate-y-2 duration-100 text-xl"
+            class="p-4 bg-orange rounded-md text-black absolute left-1/2 transform -translate-x-1/2  bottom-6 hover:-translate-y-2 duration-100 text-xl"
             >SHOP NOW</a
           >
           <div>
