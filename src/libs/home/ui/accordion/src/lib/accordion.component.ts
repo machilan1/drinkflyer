@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'lib-accordion',
   imports: [CommonModule, MatIconModule],
   template: `
-    <div class="border-2 border-orange rounded-lg p-[1.125rem]">
+    <div class="border border-orange rounded-lg p-18px">
       <button
         class="flex justify-between items-center cursor-pointer w-full"
         (click)="toggle()"
@@ -23,7 +23,9 @@ import { MatIconModule } from '@angular/material/icon';
         </span>
 
         <span #icon class="flex items-center justify-center duration-150">
-          <mat-icon class="scale-[200%] text-metal">expand_more</mat-icon>
+          <mat-icon>
+            <img src="assets/svg/more.svg" alt="" />
+          </mat-icon>
         </span>
       </button>
       <p #answer class="hidden mt-4 text-xl">

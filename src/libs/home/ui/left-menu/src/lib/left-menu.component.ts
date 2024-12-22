@@ -6,26 +6,26 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'lib-left-menu',
   imports: [CommonModule, MatIconModule],
   template: `
-    <div class=" h-screen bg-black p-36px text-white">
+    <div class=" h-screen bg-black py-22.5px px-45px text-white">
       <button (click)="onClose()">
         <mat-icon>
           <img src="assets/svg/close.svg" alt="close" />
         </mat-icon>
       </button>
-      <ul>
-        <li class="text-[1.875rem]"><a href="">SHOP ALL</a></li>
-        <li class="text-[1.875rem]"><a href="">FAQ</a></li>
-        <li class="text-[1.875rem]"><a href="">CONTACT</a></li>
-        <li class="text-[1.875rem]"><a href="">REVIEWS</a></li>
+      <ul class="mb-22.5px mt-45px">
+        <li class="text-h3 py-1"><a href="">SHOP ALL</a></li>
+        <li class="text-h3 py-1"><a href="">FAQ</a></li>
+        <li class="text-h3 py-1"><a href="">CONTACT</a></li>
+        <li class="text-h3 py-1"><a href="">REVIEWS</a></li>
       </ul>
-      <p>
+      <p class="mb-2">
         <a href="">Log In</a>
       </p>
-      <p>
+      <p class="mb-2">
         <a href="">Create account</a>
       </p>
       <div
-        class="p-4 border-2 border-white rounded-lg bg-transparent flex items-center mt-8 text-base"
+        class="py-3 px-4 border border-white rounded-md bg-transparent flex items-center mt-8 text-base"
       >
         <input
           class="bg-transparent outline-none w-full placeholder-white text-base"

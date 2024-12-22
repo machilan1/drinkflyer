@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div class=" group hover:bg-[#c99d4d] hover:text-black py-2">
-      <div class="marquee-container flex items-center gap-2">
+      <div class="marquee-container flex items-center gap-3">
         @for (item of displayStrings(); track $index) {
         <div
           class=" aspect-square h-3 bg-white group-hover:bg-black spin"

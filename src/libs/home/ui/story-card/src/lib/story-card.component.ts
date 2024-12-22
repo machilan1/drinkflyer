@@ -4,16 +4,16 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'lib-story-card',
   imports: [CommonModule],
-  template: `<div class="rounded-lg overflow-hidden ">
-    <div class="aspect-square">
+  template: `<div>
+    <div class="aspect-square rounded-lg overflow-hidden">
       <img
         class="w-full h-full object-cover"
         [src]="story().img"
         alt="a image"
       />
     </div>
-    <div class="flex flex-col items-center py-6">
-      <p class="my-4 text-center text-h3">{{ story().description }}</p>
+    <div class="flex flex-col items-center">
+      <p class="mt-4 mb-6 text-center text-h3">{{ story().description }}</p>
       <a
         class="bg-orange text-black px-4 py-4 rounded-lg cursor-pointer hover:-translate-y-[.3rem] duration-100 text-xl"
         >{{ story().button | uppercase }}</a

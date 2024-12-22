@@ -115,13 +115,13 @@ import { trigger, transition, animate, style } from '@angular/animations';
             <img src="assets/svg/hamburger.svg" alt="menu" />
           </mat-icon>
         </button>
-        <div class="max-w-[12rem]">
+        <div class="max-w-[15rem]">
           <a href="#">
             <img class="w-full" src="assets/logo.avif" alt="hero image" />
           </a>
         </div>
         <div class="flex gap-2 items-center">
-          <button>
+          <button class="hidden lg:block">
             <mat-icon>
               <img src="assets/svg/person.svg" alt="member page link" />
             </mat-icon>
@@ -139,22 +139,35 @@ import { trigger, transition, animate, style } from '@angular/animations';
         </div>
       </header>
 
-      <div class="bg-black text-white px-45px">
+      <div class="bg-black text-white">
         <section class="relative">
           <div>
-            <img class="w-full" src="assets/hero1.webp" alt="hero image" />
+            <img
+              class="hidden lg:block w-full"
+              src="assets/hero1.webp"
+              alt="hero image"
+            />
+            <img
+              class="lg:hidden w-full"
+              src="assets/heromobile.webp"
+              alt="hero image"
+            />
           </div>
           <a
             class="p-4 bg-white rounded-md text-black bg-opacity-30 backdrop-blur-md absolute left-1/2 transform -translate-x-1/2  bottom-6 hover:-translate-y-2 duration-100 text-xl"
             >SHOP NOW</a
           >
         </section>
-        <section>
-          <h2 class="text-center text-h2">UPLIFT YOUR DRINKING RITUAL</h2>
-          <p class="text-center text-xl">
+        <section class="px-22.5px py-18px lg:px-45px lg:py-36px">
+          <h2 class="text-center text-36px lg:text-h2">
+            UPLIFT YOUR DRINKING RITUAL
+          </h2>
+          <p class="text-center text-xl mt-6">
             Relax with alcohol-free cocktails enhanced with 5MG of Hemp THC.
           </p>
-          <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <ul
+            class="grid grid-cols-2 gap-22.5px lg:grid-cols-4 lg:gap-45px mt-8"
+          >
             @for (product of products; track $index) {
             <li>
               <lib-product-card [product]="product"></lib-product-card>
@@ -162,8 +175,8 @@ import { trigger, transition, animate, style } from '@angular/animations';
             }
           </ul>
         </section>
-        <section>
-          <ul class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section class="px-22.5px py-18px lg:px-45px lg:py-36px">
+          <ul class="grid grid-cols-1 lg:grid-cols-3 gap-45px">
             @for (story of stories; track $index) {
             <li>
               <lib-story-card [story]="story"></lib-story-card>
@@ -171,30 +184,33 @@ import { trigger, transition, animate, style } from '@angular/animations';
             }
           </ul>
         </section>
-        <section>
+        <section class="px-22.5px py-18px lg:px-45px lg:py-36px">
           <lib-feature-section [features]="features"></lib-feature-section>
         </section>
         <!--  -->
-        <section>
-          <h2 class="text-center text-[3.75rem]">FEATURED IN</h2>
-          <ul class="flex flex-wrap justify-center gap-4 mt-8 items-center">
-            <li class="w-[10rem]">
+        <section class="px-22.5px py-18px lg:px-45px lg:py-36px">
+          <h2 class="text-center text-36px">FEATURED IN</h2>
+          <ul
+            class="flex flex-wrap justify-center gap-y-5 gap-x-10 mt-8 items-center"
+          >
+            <li class="w-[11.25rem]">
               <img src="assets/pub1.avif" alt="a image" />
             </li>
-            <li class="w-[10rem]">
+            <li class="w-[11.25rem]">
               <img src="assets/pub2.avif" alt="a image" />
             </li>
-            <li class="w-[10rem]">
+            <li class="w-[11.25rem]">
               <img src="assets/pub3.avif" alt="a image" />
             </li>
-            <li class="w-[10rem]">
+            <li class="w-[11.25rem]">
               <img src="assets/pub4.avif" alt="a image" />
             </li>
-            <li class="w-[10rem]">
+            <li class="w-[11.25rem]">
               <img src="assets/pub5.avif" alt="a image" />
             </li>
           </ul>
-
+        </section>
+        <section class="py-36px">
           <swiper-container
             #swiper_container
             loop="true"
@@ -203,6 +219,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
             speed="10000"
             delay="0"
             slides-per-view="2.5"
+            space-between="40"
           >
             <swiper-slide>
               <lib-testament-card
@@ -232,11 +249,13 @@ import { trigger, transition, animate, style } from '@angular/animations';
           </swiper-container>
         </section>
         <!--  -->
-        <section>
+        <section class="px-22.5px py-18px lg:px-45px lg:py-36px">
           <lib-content-template-1 [content]="content"></lib-content-template-1>
         </section>
-        <section>
-          <ul class="grid grid-cols-1 lg:grid-cols-2 gap-[2.8rem] mt-8">
+        <section class="px-22.5px py-18px lg:px-45px lg:py-36px">
+          <ul
+            class="grid grid-cols-1 lg:grid-cols-2 gap-22.5px lg:gap-[2.8rem] mt-8 md:mt-0"
+          >
             @for (accordion of accordions; track $index) {
             <li>
               <lib-accordion [accordion]="accordion"></lib-accordion>
@@ -244,13 +263,15 @@ import { trigger, transition, animate, style } from '@angular/animations';
             }
           </ul>
         </section>
-        <footer class="py-36px">
+        <footer class="px-22.5px py-18px lg:px-45px lg:py-36px">
           <div class="flex justify-center">
             <a class="cursor-pointer">
               <img src="assets/flyer.avif" alt="logo" />
             </a>
           </div>
-          <div class="grid grid-cols-1 gap-10 py-36px lg:grid-cols-3">
+          <div
+            class="grid grid-cols-1 gap-10 py-36px lg:grid-cols-3 mb-45px md:mb-0"
+          >
             <div>
               <div class="grid grid-cols-2 gap-10">
                 @for (footerLink of footerLinks; track $index) {
@@ -265,7 +286,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
               </div>
             </div>
             <div>
-              <h2 class="text-[2.25rem] mb-4">SIGN UP & SAVE</h2>
+              <h2 class="text-h3 lg:text-[2.25rem] mb-4">SIGN UP & SAVE</h2>
               <div class="flex flex-col lg:flex-row gap-2 ">
                 <input
                   class="w-full bg-black border-2 border-white p-4 rounded-md placeholder-white"
@@ -281,7 +302,7 @@ import { trigger, transition, animate, style } from '@angular/animations';
             </div>
             <div class="text-end">
               <h3 class="text-xl">STAY AWHILE &#64;DRINKFLYERS</h3>
-              <ul class="flex justify-end gap-4 mt-8">
+              <ul class="flex lg:justify-end gap-4 mt-8">
                 <li>
                   <a>
                     <img src="assets/svg/instagram.svg" alt="instagram icon" />
@@ -305,9 +326,11 @@ import { trigger, transition, animate, style } from '@angular/animations';
               </ul>
             </div>
           </div>
-          <div class="flex justify-between">
+          <div
+            class="flex flex-col lg:flex-row justify-between gap-45px lg:gap-0"
+          >
             <p>© 2024, Flyers Cocktail Company. Powered by Shopify</p>
-            <ul class="flex gap-4">
+            <ul class="flex gap-4 md:justify-end">
               <li>
                 <img src="assets/svg/am_express.svg" alt="visa icon" />
               </li>

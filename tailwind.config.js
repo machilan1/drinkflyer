@@ -32,11 +32,17 @@ module.exports = {
       '5xl': '3.052rem',
       'h2':'3.375rem',
       'h3':'1.68rem',
+      '45px':'2.813rem',
+      '22.5px':'1.406rem',
+      '36px':'2.25rem',
+      '18px':'1.125rem',
     },
     extend: {
       spacing:{
-        '36px':'2.25rem',
         '45px':'2.813rem',
+        '22.5px':'1.406rem',
+        '36px':'2.25rem',
+        '18px':'1.125rem',
       }
     },
   },

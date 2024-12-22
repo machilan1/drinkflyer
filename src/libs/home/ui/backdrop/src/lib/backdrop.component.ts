@@ -16,9 +16,10 @@ import { CommonModule } from '@angular/common';
       [ngClass]="{
         'opacity-0': !opening(),
         'opacity-70': opening(),
+        'z-[45]': opening(),
         'z-[-1]': !opening()
       }"
-      class=" text-transparent w-screen h-screen fixed top-0 left-0 z-[45] bg-white opacity-0 duration-300"
+      class=" text-transparent w-screen h-screen fixed top-0 left-0  bg-white opacity-70 duration-200"
     >
       _
     </button>

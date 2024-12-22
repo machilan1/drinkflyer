@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
     <div class="w-full aspect-square rounded-lg overflow-hidden">
       <img class="w-full h-full object-cover" [src]="content().img" alt="" />
     </div>
-    <div class="w-full flex flex-col items-center justify-center py-6 ">
-      <h2 class="text-[2.25rem] lg:text-h2 text-center ">
+    <div class="w-full flex flex-col items-center justify-center">
+      <h2 class="text-[2.25rem] lg:text-h2 text-center mb-22.5px">
         {{ content().description }}
       </h2>
       <a

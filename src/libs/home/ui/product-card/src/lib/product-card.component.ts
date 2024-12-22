@@ -13,7 +13,7 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
   imports: [CommonModule, CurrencyPipe],
   template: `
     <div
-      class="border-2 border-[#cd9e53] rounded-lg overflow-hidden p-6 cursor-pointer"
+      class="border border-[#cd9e53] rounded-lg overflow-hidden p-2.5  lg:p-6 cursor-pointer"
       (mouseenter)="showHoverImg()"
       (mouseleave)="showNormalImg()"
     >
@@ -31,16 +31,16 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
         />
       </div>
       <div class="flex flex-col items-center mt-4">
-        <h3 class="text-center">{{ product().name }}</h3>
+        <h3 class="text-center">{{ product().name | uppercase }}</h3>
         <div class="flex gap-2">
           <div class="flex items-center gap-1">
             @for (item of stars(); track $index) {
             <img src="assets/svg/star.svg" alt="star" />
             }
-            <p>{{ product().reviews }} reviews</p>
+            <p class="text-nowrap">{{ product().reviews }} Reviews</p>
           </div>
         </div>
-        <p>{{ product().price | currency }}</p>
+        <p>{{ product().price | currency }}+</p>
       </div>
     </div>
   `,
